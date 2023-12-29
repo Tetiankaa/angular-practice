@@ -1,0 +1,22 @@
+Square brackets ([]) are used for property binding.
+Property binding allows to set the value of a property of an HTML element to the value of a property in the component
+
+#variable - is a template reference variable.
+Template reference variables are used to get a reference to a DOM element or an Angular component in the template.
+
+$event - is a special variable that is used to pass the event object to the method or expression being called in response to an event.
+It provides access to information about the event.
+
+[(ngModel)] - is a two-way data binding directive.
+ The square brackets [] denote property binding, and the parentheses () denote event binding.
+ Combining them with [(...)] creates a two-way data binding, meaning that changes in the component property are reflected in the view,
+ and changes in the view are reflected in the component property.
+
+ (ngModelChange) is an event that is emitted when the value bound to ngModel changes.
+
+With Subjects, you only receive the next values in the stream of values from the time of subscription.
+With BehaviorSubjects, you receive the last value as at the time of subscription as well as the next values in the stream.
+
+@Injectable decorator is used to mark a class as injectable, meaning that it can be injected with dependencies.
+   - providedIn: 'root' - means that Angular will create a single, shared instance of this service for the entire application.
+   This instance will be available for injection across all the components and services in Angular application.
