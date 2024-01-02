@@ -1,6 +1,6 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {WishItem} from "../../../shared/models/wishitem";
-import {EventService} from "../../../shared/services/EventService";
+import {Component, Input} from '@angular/core';
+import {IWish} from "../../../../interfaces/IWish";
+import {EventService} from "../../../../../shared/services/EventService";
 
 
 @Component({
@@ -9,7 +9,7 @@ import {EventService} from "../../../shared/services/EventService";
   styleUrl: './wish-list-item.component.css'
 })
 export class WishListItemComponent {
-  @Input() item!:WishItem;
+  @Input() item:IWish;
 
   constructor(private eventService:EventService) {
   }

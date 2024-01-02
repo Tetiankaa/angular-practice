@@ -20,3 +20,9 @@ With BehaviorSubjects, you receive the last value as at the time of subscription
 @Injectable decorator is used to mark a class as injectable, meaning that it can be injected with dependencies.
    - providedIn: 'root' - means that Angular will create a single, shared instance of this service for the entire application.
    This instance will be available for injection across all the components and services in Angular application.
+
+AbstractControl:
+      When we define a custom validator function for a form control, we receive an instance of AbstractControl as a parameter.
+      This allows to access the current value of the form control and perform validation based on that value.
+
+The two asterisks, **, indicate a part of the application that does not exist.

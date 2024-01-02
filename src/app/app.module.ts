@@ -1,29 +1,26 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import {FormsModule} from "@angular/forms";
-import { WishListComponent } from './components/wish-list/wish-list.component';
-import { WishFormComponent } from './components/wish-form/wish-form.component';
-import { WishFilterComponent } from './components/wish-filter/wish-filter.component';
-import { WishListItemComponent } from './components/wish-list-item/wish-list-item.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
 import {EventService} from "../shared/services/EventService";
-import {HttpClientModule} from "@angular/common/http";
+import {WishModule} from "./modules/wish/wish.module";
+import {ContactModule} from "./modules/contact/contact.module";
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HeaderComponent } from './components/header/header.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    WishListComponent,
-    WishFormComponent,
-    WishFilterComponent,
-    WishListItemComponent
+    NotFoundComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    HttpClientModule
+    WishModule,
+    ContactModule
   ],
   providers: [EventService],
   bootstrap: [AppComponent]
